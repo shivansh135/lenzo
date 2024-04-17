@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square in Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Apply CSS-like properties
+        const css = {
+            borderRadius: 20,
+            backgroundColor: "#ff69b4",
+            rotate: 45,
+            padding: 20,
+            strokeSize: 5,
+            strokeColor: "#aa34aa",
+            boxShadow: "0px 0px 10px 10px #000000"
+        };
+
+        // Function to draw square with CSS-like properties
+        function drawSquare(x, y, size, css) {
+            // Draw shadow
+            ctx.save();
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = "#000000";
+            
+            // Draw square
+            ctx.translate(x + size / 2, y + size / 2);
+            ctx.rotate(css.rotate * Math.PI / 180);
+            ctx.fillStyle = css.backgroundColor;
+
+            const borderRadius = css.borderRadius || 0;
+            const padding = css.padding || 0;
+
+            ctx.beginPath();
+            ctx.moveTo(-size / 2 + borderRadius + padding, -size / 2 - padding);
+            ctx.arcTo(size / 2 + padding, -size / 2 - padding, size / 2 + padding, -size / 2 + borderRadius + padding, borderRadius);
+            ctx.arcTo(size / 2 + padding, size / 2 + padding, size / 2 - borderRadius + padding, size / 2 + padding, borderRadius);
+            ctx.arcTo(-size / 2 - padding, size / 2 + padding, -size / 2 - padding, size / 2 - borderRadius + padding, borderRadius);
+            ctx.arcTo(-size / 2 - padding, -size / 2 - padding, -size / 2 + borderRadius + padding, -size / 2 - padding, borderRadius);
+            ctx.closePath();
+
+            ctx.fill();
+            ctx.strokeStyle = css.strokeColor;
+            ctx.lineWidth = css.strokeSize;
+            ctx.stroke();
+
+            ctx.restore();
+        }
+
+        // Draw square using CSS-like properties
+        drawSquare(50, 50, 100, css);
+    </script>
+</body>
+</html>

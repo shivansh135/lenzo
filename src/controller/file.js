@@ -1,0 +1,131 @@
+export const content = {
+    "type":"",
+    "size":"",
+    "sheetData":{
+      "type": "",
+      "size": "300x200" ,
+      "count": "1"
+    },
+    sheets:{
+      1:{
+        index:"1",
+        name:"Main",
+        elemets:[
+          {
+            "type":"shape",
+            "x":80,
+            "y":50,
+            "h":50,
+            "w":50,
+            "name":"rectangle",
+            "css":{ 
+              borderRadius:20,
+              backgroundColor:"#ff69b4",
+              rotate:0,
+              padding:30,
+              strokeSize:10,
+              strokeColor:"#aa34aa",
+              boxShadow:"0px 0px 10px 10px #00000"
+             },
+          },
+          {
+            "type":"shape",
+            "x":180,
+            "y":10,
+            "h":50,
+            "w":50,
+            "name":"rectangle",
+            "css":{ 
+              borderRadius:0,
+              backgroundColor:"#ff69b4",
+              rotate:0,
+              strokeColor:"#aa34aa",
+              boxShadow:"0px 0px 10px 10px #00000"
+             },
+          },
+          {
+            "type":"shape",
+            "x":80,
+            "y":50,
+            "h":50,
+            "w":50,
+            "name":"rectangle",
+            "css":{ 
+              borderRadius:20,
+              backgroundColor:"#ff69b4",
+              rotate:60,
+              padding:30,
+              strokeSize:10,
+              strokeColor:"#aa34aa",
+              boxShadow:"0px 0px 10px 10px #00000"
+             },
+          },
+          {
+            "type":"shape",
+            "x":180,
+            "y":10,
+            "h":50,
+            "w":50,
+            "name":"rectangle",
+            "css":{ 
+              borderRadius:0,
+              backgroundColor:"#ff69b4",
+              rotate:40,
+              strokeColor:"#aa34aa",
+              boxShadow:"0px 0px 10px 10px #00000"
+             },
+          },
+          {
+            "type":"shape",
+            "x":290,
+            "y":10,
+            "h":50,
+            "w":50,
+            "name":"rectangle",
+            "css":{ 
+              borderRadius:40,
+              backgroundColor:'green'
+            },
+          },
+          {
+            "type":"img",
+            "x":450,
+            "y":10,
+            "h":150,
+            "w":190,
+            "name":"rectangle",
+            src:"https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "css":{ 
+              borderRadius:40,
+              padding:20,
+              backgroundColor:"#000",
+              strokeColor:"#ff69b4",
+              strokeSize:10,
+              rotate:40
+            },
+          },
+          {
+            "type": "text",
+            "x":80,
+            "y":250,
+            "h":50,
+            "w":50,
+            "text":"Shivansh",
+            
+            "name":"text",
+            "css":{ 
+              borderRadius:0,
+              backgroundColor:"#ff69b4",
+              rotate:40,
+              padding:0,
+              fontFamily:"Arial",
+              strokeSize:0,
+              strokeColor:"#aa34aa",
+              boxShadow:"0px 0px 10px 10px #00000"
+             },
+          }
+        ] 
+      }
+    }
+  }
+  
